@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -85,11 +86,10 @@ public class FileReaderWriterTest {
 
     @Test
     public void testFiles() {
-        File file = new File("hello.txt");
         try {
-            final List<String> lines = Files.readAllLines(file.toPath());
+            final List<String> lines = Files.readAllLines(Paths.get("hello.txt"));
             lines.forEach(System.out::println);
-            Files.write(new File("hello1.txt").toPath(), lines);
+            Files.write(Paths.get("hello1.txt"), lines);
         } catch (IOException e) {
             e.printStackTrace();
         }
