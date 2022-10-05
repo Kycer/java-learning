@@ -24,7 +24,7 @@
         <kryo.version>5.0.0-RC5</kryo.version>
         <protostuff.version>1.7.0</protostuff.version>
         <guava.version>28.2-jre</guava.version>
-        <jackson.version>2.10.3</jackson.version>
+        <jackson.version>2.12.6.1</jackson.version>
     </properties>
 
     <dependencyManagement>
